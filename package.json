@@ -1,0 +1,19 @@
+{
+  "name": "supply_chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashtrivedi2000/Supply_Chain.git"
+  },
+  "author": "Team Alpha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashtrivedi2000/Supply_Chain/issues"
+  },
+  "homepage": "https://github.com/yashtrivedi2000/Supply_Chain#readme"
+}
