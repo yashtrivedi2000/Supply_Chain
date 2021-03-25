@@ -2,6 +2,10 @@
 
 An ethereum product for all the logistics and management, a generic supply chain.
 
+## Pre-installation
+Change the OWNER_ADDRESS in app.js file before running the application. And change address in farmerContract as what's the address where you deploy your contract.
+
+
 ## Installation
 
 Use the package manager [yarn](https://yarnpkg.com/).
