@@ -1,15 +1,15 @@
 {
   "contractName": "Roles",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for managing addresses assigned to a Role.\",\"methods\":{},\"title\":\"Roles\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/yashtrivedi/Experiments/Ethereum-SupplyChain-master/contracts/parmigianoaccesscontrol/Roles.sol\":\"Roles\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/yashtrivedi/Experiments/Ethereum-SupplyChain-master/contracts/parmigianoaccesscontrol/Roles.sol\":{\"keccak256\":\"0x3e82251c67c17585b2356f3a16c6367bf0082d152d878b46a6a060e9febdf457\",\"urls\":[\"bzz-raw://4e38dbd2c757e1ef0035fea3b0158d067f9f72b0a5abc92f3c81fd5b95563d51\",\"dweb:/ipfs/QmajnRmcLZ9vkXvSWnzyswjJywSxu3MALfYvQbtLe5aAHW\"]}},\"version\":1}",
-  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820ddc55f7b98d5b455ed1fc640651d9297c3021eb371cb790fdc61b597adf0b46364736f6c63430005100032",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820ddc55f7b98d5b455ed1fc640651d9297c3021eb371cb790fdc61b597adf0b46364736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for managing addresses assigned to a Role.\",\"methods\":{},\"title\":\"Roles\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/yashtrivedi/Experiments/Supply_Chain/contracts/parmigianoaccesscontrol/Roles.sol\":\"Roles\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/yashtrivedi/Experiments/Supply_Chain/contracts/parmigianoaccesscontrol/Roles.sol\":{\"keccak256\":\"0x3e82251c67c17585b2356f3a16c6367bf0082d152d878b46a6a060e9febdf457\",\"urls\":[\"bzz-raw://4e38dbd2c757e1ef0035fea3b0158d067f9f72b0a5abc92f3c81fd5b95563d51\",\"dweb:/ipfs/QmajnRmcLZ9vkXvSWnzyswjJywSxu3MALfYvQbtLe5aAHW\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820ed093d8f5043f787924ce8ac120cecae6f74ee0d0c85e04e65d9c617e44f758664736f6c63430005100032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820ed093d8f5043f787924ce8ac120cecae6f74ee0d0c85e04e65d9c617e44f758664736f6c63430005100032",
   "sourceMap": "116:821:5:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "116:821:5:-;;;;;;;;",
   "source": "pragma solidity >=0.4.24;\r\n\r\n/**\r\n * @title Roles\r\n * @dev Library for managing addresses assigned to a Role.\r\n */\r\nlibrary Roles {\r\n  struct Role {\r\n    mapping (address => bool) bearer;\r\n  }\r\n\r\n  /**\r\n   * @dev give an account access to this role\r\n   */\r\n  function add(Role storage role, address account) internal {\r\n    require(account != address(0));\r\n    require(!has(role, account));\r\n\r\n    role.bearer[account] = true;\r\n  }\r\n\r\n  /**\r\n   * @dev remove an account's access to this role\r\n   */\r\n  function remove(Role storage role, address account) internal {\r\n    require(account != address(0));\r\n    require(has(role, account));\r\n\r\n    role.bearer[account] = false;\r\n  }\r\n\r\n  /**\r\n   * @dev check if an account has this role\r\n   * @return bool\r\n   */\r\n  function has(Role storage role, address account)\r\n    internal\r\n    view\r\n    returns (bool)\r\n  {\r\n    require(account != address(0));\r\n    return role.bearer[account];\r\n  }\r\n}",
-  "sourcePath": "/home/yashtrivedi/Experiments/Ethereum-SupplyChain-master/contracts/parmigianoaccesscontrol/Roles.sol",
+  "sourcePath": "/home/yashtrivedi/Experiments/Supply_Chain/contracts/parmigianoaccesscontrol/Roles.sol",
   "ast": {
-    "absolutePath": "/home/yashtrivedi/Experiments/Ethereum-SupplyChain-master/contracts/parmigianoaccesscontrol/Roles.sol",
+    "absolutePath": "/home/yashtrivedi/Experiments/Supply_Chain/contracts/parmigianoaccesscontrol/Roles.sol",
     "exportedSymbols": {
       "Roles": [
         563
@@ -1283,7 +1283,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/home/yashtrivedi/Experiments/Ethereum-SupplyChain-master/contracts/parmigianoaccesscontrol/Roles.sol",
+      "absolutePath": "/home/yashtrivedi/Experiments/Supply_Chain/contracts/parmigianoaccesscontrol/Roles.sol",
       "exportedSymbols": {
         "Roles": [
           563
@@ -2655,7 +2655,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-24T22:29:39.288Z",
+  "updatedAt": "2021-03-25T10:39:34.529Z",
   "devdoc": {
     "details": "Library for managing addresses assigned to a Role.",
     "methods": {},
